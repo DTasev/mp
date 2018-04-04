@@ -1,0 +1,10 @@
+{% extends "base_generic.html" %}
+{% block title %}
+Logout -
+{% endblock %}
+{% block content %}
+<p>Logged out!</p>  
+
+<p><a href="{% url 'entries:index' %}">Go back to entries.</a></p>
+<p><a href="{% url 'login'%}">Click here to login again.</a></p>
+{% endblock %}

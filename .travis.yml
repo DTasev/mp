@@ -1,0 +1,11 @@
+language: python
+python:
+  - "3.6"
+
+before_install:
+  - export PYTHONPATH=$TRAVIS_BUILD_DIR
+  - export PIP_USE_MIRRORS=true
+
+script:
+  - python manage.py test
+  

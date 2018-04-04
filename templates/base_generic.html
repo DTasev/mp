@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        {% block fulltitle %}{% block title %}{% endblock %} - Tanks{% endblock %}
+    </title>
+    {% block stylesheets %}{% endblock %}
+    <link rel="shortcut icon" href="{% static 'tanks/dawdle-logo-v2-64px.ico' %}"/>
+</head>
+
+<body>
+<h1>Dawdle</h1>
+{% block sidebar %}<!-- insert default navigation text for every page -->{% endblock %}
+{% block bypass_auth %}
+    {% if user.is_authenticated %}
+        {% block content %}<!-- default content text (typically empty) -->{% endblock %}
+    {% else %}
+        <p>Please log in to see your entries.</p>
+        <a href="{% url 'login' %}">Login</a>
+    {% endif %}
+{% endblock %}
+
+</body>
+</html>
