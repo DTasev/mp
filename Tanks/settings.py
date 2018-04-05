@@ -67,6 +67,7 @@ else:
 ALLOWED_HOSTS = ['dtasev.me', 'www.dtasev.me']
 if HOST.DEVELOPMENT:
     ALLOWED_HOSTS.append('127.0.0.1')
+    ALLOWED_HOSTS.append('localhost')
     CORS_ORIGIN_WHITELIST = (
         '127.0.0.1:8001',
         'localhost:8001',
@@ -172,6 +173,7 @@ USE_L10N = True
 USE_TZ = True
 
 if HOST.PRODUCTION:
+    # Full path to the folder where the static files on the production server will be collected
     STATIC_ROOT = '/home/dimtasev/tanks-static/'
 elif HOST.DEVELOPMENT:
     STATIC_ROOT = os.path.join(BASE_DIR, 'tanks_static')
