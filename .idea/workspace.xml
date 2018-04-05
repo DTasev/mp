@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59bf65dd-b8c4-491f-99e3-2e959add6bea" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/tanks_frontend" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tanks/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tanks/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tanks/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tanks/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/production_settings/deploy-tanks-mp.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/production_settings/gunicorn/gunicorn.service" beforeDir="false" afterPath="$PROJECT_DIR$/production_settings/gunicorn/gunicorn.service" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/production_settings/gunicorn/gunicorn_config.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/production_settings/gunicorn/how_to_errors" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/production_settings/gunicorn/readme" beforeDir="false" afterPath="$PROJECT_DIR$/production_settings/gunicorn/readme" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/production_settings/install_pydawdle.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/production_settings/nginx/error.help" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/production_settings/nginx/readme" beforeDir="false" afterPath="$PROJECT_DIR$/production_settings/nginx/readme" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/production_settings/nginx/sites-available/dawdle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/production_settings/nginx/sites-available/dawdle_tanksapi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mc.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mc.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,10 +17,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tanks/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="521">
+            <state relative-caret-position="1001">
               <caret line="199" column="52" selection-start-line="199" selection-start-column="52" selection-end-line="199" selection-end-column="52" />
             </state>
           </provider>
@@ -50,17 +38,17 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-592">
-              <caret line="11" column="67" selection-start-line="11" selection-start-column="67" selection-end-line="11" selection-end-column="67" />
+            <state relative-caret-position="466">
+              <caret line="112" column="26" selection-start-line="112" selection-start-column="26" selection-end-line="112" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mc.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mc.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/mc.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="-192">
+              <caret line="12" column="62" selection-start-line="12" selection-start-column="62" selection-end-line="12" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -107,11 +95,11 @@
         <option value="$PROJECT_DIR$/manage.py" />
         <option value="$PROJECT_DIR$/templates/base_generic.html" />
         <option value="$PROJECT_DIR$/tanks_game/apps.py" />
-        <option value="$PROJECT_DIR$/templates/mc.html" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/Tanks/urls.py" />
         <option value="$PROJECT_DIR$/Tanks/settings.py" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/templates/mc.html" />
       </list>
     </option>
   </component>
@@ -126,7 +114,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="986" />
-    <option name="width" value="941" />
+    <option name="width" value="939" />
     <option name="height" value="1087" />
   </component>
   <component name="ProjectView">
@@ -251,7 +239,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="986" y="0" width="941" height="1087" extended-state="0" />
+    <frame x="986" y="0" width="939" height="1087" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -261,7 +249,7 @@
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33230454" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2454054" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24593717" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32925585" />
@@ -297,16 +285,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tanksapi/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="11" column="64" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tanksapi/apps.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
@@ -588,13 +566,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/mc.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tanks/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
@@ -602,17 +573,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
+    <entry file="file://$PROJECT_DIR$/Tanks/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-592">
-          <caret line="11" column="67" selection-start-line="11" selection-start-column="67" selection-end-line="11" selection-end-column="67" />
+        <state relative-caret-position="1001">
+          <caret line="199" column="52" selection-start-line="199" selection-start-column="52" selection-end-line="199" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tanks/settings.py">
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="199" column="52" selection-start-line="199" selection-start-column="52" selection-end-line="199" selection-end-column="52" />
+        <state relative-caret-position="466">
+          <caret line="112" column="26" selection-start-line="112" selection-start-column="26" selection-end-line="112" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ms.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-192">
+          <caret line="12" column="62" selection-start-line="12" selection-start-column="62" selection-end-line="12" selection-end-column="62" />
         </state>
       </provider>
     </entry>
