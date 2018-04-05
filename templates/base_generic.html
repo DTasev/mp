@@ -1,26 +1,32 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>
-        {% block fulltitle %}{% block title %}{% endblock %} - Tanks{% endblock %}
-    </title>
-    {% block stylesheets %}{% endblock %}
-    <link rel="shortcut icon" href="{% static 'tanks/dawdle-logo-v2-64px.ico' %}"/>
-</head>
+<html style="overflow-x:visible">
+<title>Tanks</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- online: https://www.w3schools.com/w3css/4/w3.css -->
+<link rel="stylesheet" href="/tanks-static/tanks/css/w3.css">
+<link rel="stylesheet" href="/tanks-static/tanks/css/style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+<link rel="shortcut icon" type="image/png" href="static/tanks/tank.png"/>
+<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Raleway", sans-serif
+    }
+</style>
 
 <body>
-<h1>Dawdle</h1>
-{% block sidebar %}<!-- insert default navigation text for every page -->{% endblock %}
-{% block bypass_auth %}
-    {% if user.is_authenticated %}
-        {% block content %}<!-- default content text (typically empty) -->{% endblock %}
-    {% else %}
-        <p>Please log in to see your entries.</p>
-        <a href="{% url 'login' %}">Login</a>
-    {% endif %}
-{% endblock %}
-
+{% block content %}{% endblock %}
 </body>
+
 </html>
