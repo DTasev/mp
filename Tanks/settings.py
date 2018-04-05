@@ -55,10 +55,14 @@ else:
     DEBUG = True
     HOST.DEVELOPMENT = True
     print("Running in DEVELOPMENT environment.")
+print("Override production settings")
+
+DEBUG = True
+HOST.DEVELOPMENT = True
 
 # SECURITY WARNING: keep the secret key used in production secret!
 env_var_name = "DJANGO_SECRET_KEY"
-SECRET_KEY = os.environ.get(env_var_name, None)
+SECRET_KEY = "54x#sq$k!(10r4cyn3m2p)2_r9ylo3^wkstqy96f4#f+mfh20x"
 if not SECRET_KEY and HOST.PRODUCTION:
     raise EnvironmentError("Environment variable {0} NOT SET!".format(env_var_name))
 else:
@@ -181,7 +185,7 @@ elif HOST.DEVELOPMENT:
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/tanks-static/'
 
 # Redirect to home URL after login (Default redirects to /accounts/profile/)
 LOGIN_REDIRECT_URL = '/tanks/'
