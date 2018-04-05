@@ -1,1 +1,10 @@
-Put in /etc/nginx/sites-available and /sites-enabled/
+To install put the sites-available/tanks file in /etc/nginx/sites-available. This should then be symlinked into /sites-enabled/, this can be done by:
+
+```bash
+# copy the file
+sudo cp sites-available/tanks /etc/nginx/sites-available
+# go to nginx's settings directory
+cd /etc/nginx/sites-available
+# create symlink to sites-enabled
+sudo ln -s tanks ../sites-enabled
+```
