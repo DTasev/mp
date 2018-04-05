@@ -1,0 +1,3 @@
+[submodule "tanks_frontend"]
+	path = tanks_frontend
+	url = https://github.com/DTasev/mp-fe
