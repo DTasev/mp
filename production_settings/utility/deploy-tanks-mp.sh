@@ -4,9 +4,10 @@ curl -H "Travis-API-Version: 3" \
 "https://api.travis-ci.com/repo/DTasev%2Fmp-fe/builds?limit=1&branch.name=master" | python3 ~/secret/crontab/check-build-status.py
 
 if [ ! $? -eq 0 ]; then
-    echo "The python build status script did not exit successfully. The repository was not deployed"
+    echo "The latest build did NOT pass. The repository was not deployed!"
 else
-    cd ~/tanks
+    # Deploy front-end
+    cd ~/tanks_server/tanks_frontend
     git checkout master
     # Pull the latest changes
     git pull
@@ -14,5 +15,12 @@ else
     npm install
     # Builds the TS source to JS and bundles the built JS into a production distribution package
     npm run fullbuild
-fi
 
+    # Deploy Server
+    cd ~/tanks_server
+    git checkout master
+    # Pull the latest changes
+    git pull
+    # Collect the front-end build
+    python manage.py collectstatic
+fi
