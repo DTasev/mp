@@ -197,7 +197,5 @@ REST_FRAMEWORK = {
 }
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "tanks_frontend", "src", "dist"),
-    os.path.join(BASE_DIR, "tanks_frontend", "img"),
-    os.path.join(BASE_DIR, "tanks_frontend", "css"),
+    os.path.join(BASE_DIR, "tanks_frontend", "static"),
 ]
