@@ -1,0 +1,12 @@
+[Unit]
+Description=gunicorn daemon for Dawdle
+After=network.target
+
+[Service]
+User=dimtasev
+Group=www-data
+WorkingDirectory=/home/dimtasev/dawdle-web
+ExecStart=/home/dimtasev/pydawdle/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/dimtasev/dawdle.sock Dawdle.wsgi:application
+
+[Install]
+WantedBy=multi-user.target

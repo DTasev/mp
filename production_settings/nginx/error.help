@@ -1,0 +1,17 @@
+If the following error is present, create the logs folder in /usr/share/nginx, it should be /usr/share/nginx/logs
+
+(pydawdle) dimtasev@dawdle-web:/etc/nginx/sites-enabled$ sudo service nginx status
+● nginx.service - A high performance web server and a reverse proxy server
+   Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+   Active: failed (Result: exit-code) since Wed 2018-01-10 01:51:05 UTC; 3s ago
+  Process: 3549 ExecStop=/sbin/start-stop-daemon --quiet --stop --retry QUIT/5 --pidfile /run/nginx.pid (code=exited, status=0/SUCCESS)
+  Process: 3835 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=1/FAILURE)
+ Main PID: 3394 (code=exited, status=0/SUCCESS)
+
+Jan 10 01:51:05 dawdle-web systemd[1]: Starting A high performance web server and a reverse proxy server...
+Jan 10 01:51:05 dawdle-web nginx[3835]: nginx: [emerg] open() "/usr/share/nginx/logs/error.log" failed (2: No such file or directory)
+Jan 10 01:51:05 dawdle-web nginx[3835]: nginx: configuration file /etc/nginx/nginx.conf test failed
+Jan 10 01:51:05 dawdle-web systemd[1]: nginx.service: Control process exited, code=exited status=1
+Jan 10 01:51:05 dawdle-web systemd[1]: Failed to start A high performance web server and a reverse proxy server.
+Jan 10 01:51:05 dawdle-web systemd[1]: nginx.service: Unit entered failed state.
+Jan 10 01:51:05 dawdle-web systemd[1]: nginx.service: Failed with result 'exit-code'.
