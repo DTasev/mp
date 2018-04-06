@@ -55,10 +55,6 @@ else:
     DEBUG = True
     HOST.DEVELOPMENT = True
     print("Running in DEVELOPMENT environment.")
-print("Override production settings")
-
-DEBUG = True
-HOST.DEVELOPMENT = True
 
 # SECURITY WARNING: keep the secret key used in production secret!
 env_var_name = "DJANGO_SECRET_KEY"
@@ -178,7 +174,7 @@ USE_TZ = True
 
 if HOST.PRODUCTION:
     # Full path to the folder where the static files on the production server will be collected
-    STATIC_ROOT = '/home/dimtasev/tanks-static/'
+    STATIC_ROOT = '/home/dimtasev/staticfiles/tanks'
 elif HOST.DEVELOPMENT:
     STATIC_ROOT = os.path.join(BASE_DIR, 'tanks_static')
 
