@@ -1,42 +1,19 @@
 server {
-    server_name www.potaters.co.uk potaters.co.uk www.potaters.uk potaters.uk www.dtasev.me dtasev.me;
+    server_name www.dtasev.me dtasev.me;
 
     access_log off;
     error_log logs/error.log info;
 
-    location /static/ {
-        alias /home/dimtasev/dawdle-static/;
-    }
-
-    location / {
-        include proxy_params;
-        proxy_pass http://unix:/home/dimtasev/dawdle.sock;
-    }
-
-    location /quickhub {
-        alias /home/dimtasev/quickhub/;
-    }
-
+    # forward /tanks path to the socket where gunicorn is listening
     location /tanks {
-        alias /home/dimtasev/tanks/;    
+        include proxy_params;
+        proxy_pass http://unix:/home/dimtasev/tanks.sock;
     }
 
-    listen 80; # managed by Certbot
-
-    listen 443 ssl; # managed by Certbot
-ssl_certificate /etc/letsencrypt/live/dtasev.me/fullchain.pem; # managed by Certbot
-ssl_certificate_key /etc/letsencrypt/live/dtasev.me/privkey.pem; # managed by Certbot
-    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
-    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+    # forward /tanks-static/ to a specific folder on the server, from where the staticfiles are served
+    location /tanks-static/ {
+        alias /home/dimtasev/tanks-static/;
+    }
 
 
-    if ($scheme != "https") {
-        return 301 https://$host$request_uri;
-    } # managed by Certbot
-
-
-    # Redirect non-https traffic to https
-    # if ($scheme != "https") {
-    #     return 301 https://$host$request_uri;
-    # } # managed by Certbot
 }

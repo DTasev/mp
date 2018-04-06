@@ -11,6 +11,11 @@ sudo apt-get nginx
 
 - NPM - https://nodejs.org/en/download/package-manager/
 
+```bash
+curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
+
 - GUnicorn - preferred way is to create a virutal environment
 
 ```bash
@@ -55,18 +60,20 @@ npm run fullbuild
 # go back to tanks_server folder
 cd ../production_settings
 # copy the file
-sudo cp sites-available/tanks /etc/nginx/sites-available
+sudo cp nginx/sites-available/tanks /etc/nginx/sites-available
 # go to nginx's settings directory
-cd /etc/nginx/sites-available
+cd /etc/nginx/sites-enabled
 # create symlink to sites-enabled
-sudo ln -s tanks ../sites-enabled
+sudo ln -s ../sites-available/tanks tanks
 ```
 7. Set-up GUnicorn service
 ```bash
 # go back to the tanks_server/production_settings folder
 cd -
 # copy the gunicorn service
-sudo cp gunicorn.service /etc/systemd/system/gunicorn.service
+sudo cp gunicorn/gunicorn.service /etc/systemd/system/gunicorn.service
+# give read and execute permissions to everyone
+sudo chmod +rx /etc/systemd/system/gunicorn.service
 ```
 
 8. Collect static files for Django to serve
@@ -78,4 +85,15 @@ python manage.py collectstatic
 ```bash
 sudo service nginx start
 sudo service gunicorn start
+```
+
+Single code block, for Ubuntu 16.04
+
+```bash
+sudo apt-get update
+sudo apt-get install python-pip
+pip install virtualenv
+pip install --upgrade pip
+virtualenv --help
+cd ~ && virtualenv -p python3 pytanks
 ```
