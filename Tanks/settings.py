@@ -126,10 +126,10 @@ if HOST.PRODUCTION:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': '',
-            'USER': '',
-            'PASSWORD': '',
-            'HOST': '',
+            'NAME': 'tanksdb',
+            'USER': 'tanksclient',
+            'PASSWORD': 'majorprojectpasswordforproject',
+            'HOST': '146.148.25.165',
             'PORT': '',
         }
     }

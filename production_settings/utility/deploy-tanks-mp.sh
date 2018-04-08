@@ -6,6 +6,8 @@ curl -H "Travis-API-Version: 3" \
 if [ ! $? -eq 0 ]; then
     echo "The latest build did NOT pass. The repository was not deployed!"
 else
+    echo "The latest build PASSED. Deploying repository"
+    source ~/pydawdle/bin/activate
     # Deploy front-end
     cd ~/tanks_server/tanks_frontend
     git checkout master
@@ -14,7 +16,7 @@ else
     # Install any new packages (if present)
     npm install
     # Builds the TS source to JS and bundles the built JS into a production distribution package
-    npm run fullbuild
+    npm run fullbuild:prod
 
     # Deploy Server
     cd ~/tanks_server
@@ -22,5 +24,5 @@ else
     # Pull the latest changes
     git pull
     # Collect the front-end build
-    python manage.py collectstatic
+    python manage.py collectstatic --no-input
 fi
