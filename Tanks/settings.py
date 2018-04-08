@@ -176,7 +176,7 @@ if HOST.PRODUCTION:
     # Full path to the folder where the static files on the production server will be collected
     STATIC_ROOT = '/home/dimtasev/staticfiles/tanks'
 elif HOST.DEVELOPMENT:
-    STATIC_ROOT = os.path.join(BASE_DIR, 'tanks_frontend/static')
+    STATIC_ROOT = os.path.join(BASE_DIR, 'tanks_static')
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
