@@ -58,7 +58,6 @@ else:
 
 # SECURITY WARNING: keep the secret key used in production secret!
 if HOST.PRODUCTION:
-    raise EnvironmentError("Environment variable {0} NOT SET!".format(env_var_name))
     from .prod_conf import SECRET_KEY
 else:
     SECRET_KEY = 'thisisarandomsecretkeyforthetestingenvironment'
@@ -122,16 +121,7 @@ WSGI_APPLICATION = 'Tanks.wsgi.application'
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 if HOST.PRODUCTION:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'tanksdb',
-            'USER': 'tanksclient',
-            'PASSWORD': 'majorprojectpasswordforproject',
-            'HOST': '146.148.25.165',
-            'PORT': '',
-        }
-    }
+    from .prod_conf import DATABASES
 else:
     DATABASES = {
         'default': {
