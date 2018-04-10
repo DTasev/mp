@@ -57,10 +57,9 @@ else:
     print("Running in DEVELOPMENT environment.")
 
 # SECURITY WARNING: keep the secret key used in production secret!
-env_var_name = "DJANGO_SECRET_KEY"
-SECRET_KEY = "54x#sq$k!(10r4cyn3m2p)2_r9ylo3^wkstqy96f4#f+mfh20x"
-if not SECRET_KEY and HOST.PRODUCTION:
+if HOST.PRODUCTION:
     raise EnvironmentError("Environment variable {0} NOT SET!".format(env_var_name))
+    from .prod_conf import SECRET_KEY
 else:
     SECRET_KEY = 'thisisarandomsecretkeyforthetestingenvironment'
 
