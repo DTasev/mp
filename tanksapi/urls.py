@@ -10,7 +10,6 @@ router = routers.DefaultRouter()
 # http://www.django-rest-framework.org/api-guide/routers/#defaultrouter
 router.register('maps', views.MapViewSet)
 
-
 urlpatterns = [
     path('', include(router.urls)),
 ]

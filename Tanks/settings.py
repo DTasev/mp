@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 
 import os
 import socket
+import sys
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -35,23 +37,27 @@ elif "TRAVIS" in os.environ:
     HOST.TEST = True
     print("Running in TESTING environment.")
 else:
-    # Prints out SQL queries in the console
-    LOGGING = {
-        'version': 1,
-        'disable_existing_loggers': False,
-        'handlers': {
-            'console': {
-                'level': 'DEBUG',
-                'class': 'logging.StreamHandler',
-            }
-        },
-        'loggers': {
-            'django.db.backends': {
-                'handlers': ['console'],
-                'level': 'DEBUG',
+    # is it running locally but testing
+    TESTING = sys.argv[1:2] == ['test']
+
+    if not TESTING:
+        # Prints out SQL queries in the console
+        LOGGING = {
+            'version': 1,
+            'disable_existing_loggers': False,
+            'handlers': {
+                'console': {
+                    'level': 'DEBUG',
+                    'class': 'logging.StreamHandler',
+                }
             },
+            'loggers': {
+                'django.db.backends': {
+                    'handlers': ['console'],
+                    'level': 'DEBUG',
+                },
+            }
         }
-    }
     DEBUG = True
     HOST.DEVELOPMENT = True
     print("Running in DEVELOPMENT environment.")
