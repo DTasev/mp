@@ -1,9 +1,9 @@
-from rest_framework import viewsets
 from rest_framework import permissions
+from rest_framework import viewsets
 
+from .models import Map
 # Create your views here.
 from .serializers import ListMapSerializer, MapCreatorSerializer, SingleMapSerializer
-from .models import Map
 
 
 class MapViewSet(viewsets.ModelViewSet):
@@ -21,3 +21,5 @@ class MapViewSet(viewsets.ModelViewSet):
 
         # GET tanks/maps/ - return all maps
         return ListMapSerializer
+
+
