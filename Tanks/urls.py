@@ -20,6 +20,6 @@ from django.views.generic.base import TemplateView
 urlpatterns = [
     path('tanks/', TemplateView.as_view(template_name='index.html')),
     path('tanks/mc.html', TemplateView.as_view(template_name='mc.html')),
-    path('tanks/accounts/', include('django.contrib.auth.urls')),
+    path('tanks/', include('django.contrib.auth.urls')),
     path('tanks/api/', include('tanksapi.urls')),
 ]
