@@ -3,6 +3,9 @@ from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 
 
+# Credit for sign-up page to
+# https://simpleisbetterthancomplex.com/tutorial/2017/02/18/how-to-create-user-sign-up-view.html
+# Changes: the redirect URL was adjusted, the signup page was changed to fit the style of the Tanks project login pages
 def signup(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
