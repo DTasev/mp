@@ -2,28 +2,28 @@
 {% load static %}
 
 {% block content %}
-<!-- !PAGE CONTENT! -->
-<div class="w3-main">
-    <div class="canvas-holder container">
-        <div class="child">
-            <canvas id="tanks-canvas" class="game-canvas"></canvas>
-        </div>
-        <div id="tanks-ui" class="child">
-        </div>
-    </div>
-    <div id="mc-modal" class="mc-modal">
-        <!-- Modal content -->
-        <div class="w3-col w3-hide-small m2 l2">&nbsp;</div>
-        <div class="w3-col s12 m8 l8">
-            <div class="mc-modal-content">
-                <span class="mc-modal-close w3-button" id="mc-modal-close">×</span>
-                <div id="mc-modal-text" class="modal-text">
-                </div>
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main">
+        <div class="canvas-holder container">
+            <div class="child">
+                <canvas id="tanks-canvas" class="game-canvas"></canvas>
+            </div>
+            <div id="tanks-ui" class="child">
             </div>
         </div>
-        <div class="w3-col w3-hide-small m2 l2">&nbsp;</div>
+        <div id="mc-modal" class="mc-modal">
+            <!-- Modal content -->
+            <div class="w3-col w3-hide-small m2 l2">&nbsp;</div>
+            <div class="w3-col s12 m8 l8">
+                <div class="mc-modal-content">
+                    <span class="mc-modal-close w3-button" id="mc-modal-close">×</span>
+                    <div id="mc-modal-text" class="modal-text">
+                    </div>
+                </div>
+            </div>
+            <div class="w3-col w3-hide-small m2 l2">&nbsp;</div>
+        </div>
     </div>
-</div>
 
-<script src="/tanks-static/tanks/js/mc/bundle.js"></script>
+    <script src="{% static "tanks/js/mc/bundle.js" %}"></script>
 {% endblock %}
