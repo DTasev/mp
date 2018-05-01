@@ -1,8 +1,10 @@
 {% extends "base_generic.html" %}
+{% load tag_filters %}
 
 {% block content %}
-    <div class="w3-display-container tanks-login-form-container">
-        <div class="w3-display-middle mc-modal-content">
+    <div class="w3-row tanks-page-center">
+        <div class="w3-col w3-hide-small m2 l3">&nbsp</div>
+        <div class="w3-col w3-border s12 m8 l6 w3-padding-16 w3-white">
             {% if user.is_authenticated %}
                 <a href="{% url 'logout' %}">Logout</a>
             {% else %}
@@ -20,26 +22,29 @@
                     {% endif %}
                 {% endif %}
 
-                <form method="post" action="{% url 'login' %}">
+                <form method="post" action="{% url 'login' %}" class="w3-margin">
                     {% csrf_token %}
 
                     <div>
-                        <td>{{ form.username.label_tag }}</td>
-                        <td>{{ form.username }}</td>
+                        {{ form.username.label_tag }}
+                        {{ form.username|addclass:"w3-input w3-border" }}
                     </div>
                     <div>
-                        <td>{{ form.password.label_tag }}</td>
-                        <td>{{ form.password }}</td>
+                        {{ form.password.label_tag }}
+                        {{ form.password|addclass:"w3-input w3-border" }}
                     </div>
 
                     <div>
-                        <input class="w3-button w3-border w3-margin-top" type="submit" value="Login"/>
+                        <input class="w3-button w3-border w3-margin-top w3-margin-bottom" style="width: 100%; "
+                               type="submit"
+                               value="Login"/>
+                        <a class="w3-button w3-border" href="{% url 'signup' %}" style="width: 100%">Register</a>
                         <input type="hidden" name="next" value="{{ next }}"/>
                     </div>
                 </form>
-
             {% endif %}
         </div>
+        <div class="w3-col w3-hide-small m2 l3">&nbsp</div>
     </div>
 
 {% endblock %}

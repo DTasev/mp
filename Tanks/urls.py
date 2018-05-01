@@ -14,13 +14,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.urls import path, include
-from django.views.generic.base import TemplateView
+from django.views.generic.base import TemplateView, RedirectView
 from tanks_utility.views import signup
 
 urlpatterns = [
+    # uncomment this if you want a redirection to the Tanks URL
+    # path('', RedirectView.as_view(url='tanks/', permanent=True)),
     path('tanks/', TemplateView.as_view(template_name='index.html')),
     path('tanks/mc.html', TemplateView.as_view(template_name='mc.html')),
     path('tanks/', include('django.contrib.auth.urls')),
     path('tanks/api/', include('tanksapi.urls')),
-    path('tanks/signup', signup, name="signup")
+    path('tanks/signup/', signup, name="signup"),
 ]

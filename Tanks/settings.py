@@ -81,6 +81,7 @@ if HOST.DEVELOPMENT:
 
 INSTALLED_APPS = [
     'tanksapi.apps.TanksApiConfig',
+    'tanks_utility',
     'rest_framework',
     'django_extensions',
     'corsheaders',

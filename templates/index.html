@@ -15,12 +15,16 @@
         </div>
         <div class="w3-container">
             {% if user.is_authenticated %}
-                <p>Logged in as: {{ user.username }} </p>
-                <a class="w3-button w3-border" href="{% url 'logout' %}">Logout</a>
+                <div class="w3-center tanks-full-width">
+                    <p>Logged in as: {{ user.username }} </p>
+                </div>
+                <a class="w3-button w3-border tanks-full-width" href="{% url 'logout' %}">Logout</a>
             {% else %}
-                You are not logged in.
-                <a class="w3-button w3-border" href="{% url 'login' %}">Login</a>
-                <a class="w3-button w3-border" href="{% url 'signup' %}">Register</a>
+                <div class="w3-center tanks-full-width">
+                    You are not logged in.
+                </div>
+                <a class="w3-button w3-border tanks-full-width" href="{% url 'login' %}">Login</a>
+                <a class="w3-button w3-border tanks-full-width" href="{% url 'signup' %}">Register</a>
             {% endif %}
 
         </div>
@@ -48,8 +52,8 @@
             <div id="tanks-ui" class="child">
             </div>
         </div>
-        <!-- End page content -->
     </div>
+    <!-- End page content -->
 
     <script src="{% static "tanks/js/bundle.js" %}"></script>
 {% endblock %}
