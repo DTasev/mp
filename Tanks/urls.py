@@ -19,7 +19,7 @@ from tanks_utility.views import signup
 
 urlpatterns = [
     # uncomment this if you want a redirection to the Tanks URL
-    # path('', RedirectView.as_view(url='tanks/', permanent=True)),
+    path('', RedirectView.as_view(url='tanks/', permanent=True)),
     path('tanks/', TemplateView.as_view(template_name='index.html')),
     path('tanks/mc.html', TemplateView.as_view(template_name='mc.html')),
     path('tanks/', include('django.contrib.auth.urls')),

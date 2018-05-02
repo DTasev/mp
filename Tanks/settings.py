@@ -72,6 +72,8 @@ ALLOWED_HOSTS = ['dtasev.me', 'www.dtasev.me']
 if HOST.DEVELOPMENT:
     ALLOWED_HOSTS.append('127.0.0.1')
     ALLOWED_HOSTS.append('localhost')
+    ALLOWED_HOSTS.append('.localtunnel.me')
+
     CORS_ORIGIN_WHITELIST = (
         '127.0.0.1:8001',
         'localhost:8001',
