@@ -18,7 +18,7 @@ Production instructions below use `apt-get` and are for Debian-based distributio
 - NGINX
 
 ```bash
-sudo apt-get nginx
+sudo apt-get install nginx
 ```
 
 - NPM - https://nodejs.org/en/download/package-manager/
@@ -146,15 +146,12 @@ This may happen if Django is not configured to allow the current domain used to 
 - Go to http://localhost:8000
 - Add the URL you used in Tanks/settings.py. The variable that has to be changed is ALLOWED_HOSTS
 
-
 # After submission
 The automatic deployment will be stopped on the day of the submission deadline. The repositories of the project will be archived (made read-only) and public. Any future work on the project will continue in a fork.
 
 I guarantee that the Tanks game project will be kept accessible online at least until the marks for the Major Project module are released. 
 
 Access to the production server is not be provided in the submission, but may be explicitly requested by the markers of the submission. To request access to the production server please email me at dbt@aber.ac.uk.
-
-
 
 # Public Address
 The public address for the Tanks game is: https://dtasev.me/tanks
