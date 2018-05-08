@@ -2,7 +2,7 @@ Tanks Server
 ------------
 
 - This repository was archived on 04/05/2018.
-- This repository was briefly unarchived and archived again to fix the Travis build link below.
+- This repository was briefly unarchived and archived again to fix the Travis build link below on 08/05/2018.
 
 --------
 [![Build Status](https://travis-ci.com/DTasev/mp-server.svg?token=tVHLx7YCXjQgH7CKoqd6&branch=master)](https://travis-ci.com/DTasev/mp-server)
