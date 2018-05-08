@@ -1,12 +1,11 @@
 Tanks Server
 ------------
 
-This repository was archived on 04/05/2018.
+- This repository was archived on 04/05/2018.
+- This repository was briefly unarchived and archived again to fix the Travis build link below.
 
 --------
-
-
-[![Build Status](https://travis-ci.org/DTasev/dawdle-web.svg?branch=master)](https://travis-ci.org/DTasev/dawdle-web)
+[![Build Status](https://travis-ci.com/DTasev/mp-server.svg?token=tVHLx7YCXjQgH7CKoqd6&branch=master)](https://travis-ci.com/DTasev/mp-server)
 
 Production instructions below use `apt-get` and are for Debian-based distributions. The instructions require to have Python and NPM executables available on the PATH. This will be done automatically, unless running on Windows, where additional configuration might be necessary to include them on the PATH.
 
